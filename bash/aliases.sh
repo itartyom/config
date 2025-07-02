@@ -12,3 +12,5 @@ alias ddown='docker compose down'
 alias dlogs='docker compose logs'
 alias dlogsf='docker compose logs -f'
 
+alias q='exit'
+
