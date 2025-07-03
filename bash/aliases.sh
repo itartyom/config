@@ -6,11 +6,10 @@ alias ednginx='sudo ranger /etc/nginx'
 alias lg='lazygit'
 alias gp='git pull'
 
-alias dup='docker compose up'
-alias dupd='docker compose up -d'
-alias ddown='docker compose down'
-alias dlogs='docker compose logs'
-alias dlogsf='docker compose logs -f'
+alias dc='docker compose'
+alias dcu='docker compose up'
+alias dcd='docker compose down'
+alias dcl='docker compose logs'
 
 alias q='exit'
 
