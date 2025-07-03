@@ -17,6 +17,7 @@ alias scs='sc status'
 alias jc='sudo journalctl'
 
 alias config='ranger ~/.config'
+alias loadenv='set -o allexport; [ -f .env ] && source .env; set +o allexport'
 
 alias q='exit'
 
