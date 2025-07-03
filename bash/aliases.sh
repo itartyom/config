@@ -20,5 +20,7 @@ alias config='ranger ~/.config'
 alias loadenv='set -o allexport; [ -f .env ] && source .env; set +o allexport'
 alias ht='history | tail'
 
+alias port='sudo lsof -i :'
+
 alias q='exit'
 
