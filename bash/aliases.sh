@@ -11,5 +11,10 @@ alias dcu='docker compose up'
 alias dcd='docker compose down'
 alias dcl='docker compose logs'
 
+alias sc='sudo systemctl'
+alias scs='sc status'
+
+alias jc='sudo journalctl'
+
 alias q='exit'
 
