@@ -16,5 +16,7 @@ alias scs='sc status'
 
 alias jc='sudo journalctl'
 
+alias config='ranger ~/.config'
+
 alias q='exit'
 
