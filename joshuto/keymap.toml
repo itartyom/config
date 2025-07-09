@@ -78,7 +78,7 @@ keymap = [
   { keys = ["p", "L"], commands = ["symlink_files --relative=true"] },
 
   { keys = ["delete"], commands = ["delete_files"] },
-  { keys = ["d", "D"], commands = ["delete_files"] },
+  { keys = ["d", "D"], commands = ["delete_files --noconfirm"] },
 
   { keys = ["p", "p"], commands = ["paste_files"] },
   { keys = ["p", "o"], commands = ["paste_files --overwrite=true"] },
@@ -127,15 +127,17 @@ keymap = [
   { keys = ["g", "h"], commands = ["cd ~/"] },
   { keys = ["?"], commands = ["help"] },
 
-  { keys = ["e"], commands = ["rename_append"] },
-  { keys = ["E"], commands = ["rename_prepend"] },
+  { keys = ["e"], commands = ["rename_keep_ext"] },
+  { keys = ["E"], commands = ["rename_append"] },
 
-  { keys = ["A"], commands = [":mkdir"]},
-  { keys = ["a"], commands = [":touch"]},
+  { keys = ["A"], commands = [":mkdir "]},
+  { keys = ["a"], commands = [":touch "]},
   { keys = ["S"], commands = ["shell sh -c $SHELL"]},
 
   { keys = ["b", "a"], commands = ["add_bookmark"]},
-  { keys = ["b", "c"], commands = ["cd_bookmark"]}
+  { keys = ["b", "c"], commands = ["cd_bookmark"]},
+
+  { keys = [","], commands = ["shell nvim ."]},
     
 ]
 

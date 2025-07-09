@@ -1,10 +1,9 @@
-alias salias='nvim ~/.config/bash/aliases.sh'
-
-alias edserv='sudo ranger /etc/systemd/system'
-alias ednginx='sudo ranger /etc/nginx'
+alias edserv='sudo joshuto /etc/systemd/system'
+alias ednginx='sudo joshuto /etc/nginx'
 
 alias lg='lazygit'
 alias gp='git pull'
+alias jo='joshuto'
 
 alias dc='docker compose'
 alias dcu='docker compose up'
@@ -13,14 +12,13 @@ alias dcl='docker compose logs'
 
 alias sc='sudo systemctl'
 alias scs='sc status'
+alias scr='sc restart'
 
-alias jc='sudo journalctl'
+alias jcl='sudo journalctl'
 
-alias config='ranger ~/.config'
+alias config='joshuto ~/.config'
 alias loadenv='set -o allexport; [ -f .env ] && source .env; set +o allexport'
 alias ht='history | tail'
 
-alias port='sudo lsof -i :'
-
 alias q='exit'
-
+alias kcp='kitty +kitten clipboard'
