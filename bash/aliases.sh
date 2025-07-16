@@ -1,5 +1,5 @@
-alias edserv='sudo joshuto /etc/systemd/system'
-alias ednginx='sudo joshuto /etc/nginx'
+alias edserv='sudo -E joshuto /etc/systemd/system'
+alias ednginx='sudo -E joshuto /etc/nginx'
 
 alias lg='lazygit'
 alias gp='git pull'
