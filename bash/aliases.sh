@@ -1,5 +1,5 @@
-alias edserv='sudo -E joshuto /etc/systemd/system'
-alias ednginx='sudo -E joshuto /etc/nginx'
+alias edserv='joshuto /etc/systemd/system'
+alias ednginx='joshuto /etc/nginx'
 
 alias lg='lazygit'
 alias gp='git pull'
@@ -14,7 +14,7 @@ alias sc='sudo systemctl'
 alias scs='sc status'
 alias scr='sc restart'
 
-alias jcl='sudo journalctl'
+alias jcl='journalctl'
 
 alias config='joshuto ~/.config'
 alias loadenv='set -o allexport; [ -f .env ] && source .env; set +o allexport'
