@@ -22,4 +22,4 @@ alias ht='history | tail'
 
 alias q='exit'
 alias kcp='kitty +kitten clipboard'
-alias jg='just -g'
+alias jg='just -f ~/.justfile'
