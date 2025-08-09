@@ -41,6 +41,7 @@ reverse = false
 [preview]
 preview_protocol = "disabled"
 preview_script = "~/.config/joshuto/preview_file.sh" # make sure it's marked as executable
+max_preview_size = "10MB"
 
 [search]
 # insensitive, sensitive, smart
