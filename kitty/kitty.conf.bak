@@ -2791,10 +2791,3 @@ map cmd+0 goto_tab 10
 # PaperColor Dark
 include current-theme.conf
 # END_KITTY_THEME
-
-# BEGIN_KITTY_FONTS
-font_family      family="PT Mono"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# END_KITTY_FONTS

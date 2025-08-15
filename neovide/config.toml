@@ -1,0 +1,3 @@
+frame = "transparent"   # macOS: прозрачный бар
+title-hidden = true     # спрятать текст заголовка
+

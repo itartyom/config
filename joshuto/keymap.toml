@@ -101,6 +101,7 @@ keymap = [
   { keys = ["/"], commands = [":search "] },
   { keys = ["|"], commands = [":search_inc "] },
   { keys = ["\\"], commands = [":search_glob "] },
+  { keys = ["f"], commands = ["search_fzf"]},
   { keys = ["C"], commands = ["subdir_fzf"] },
 
   { keys = ["n"], commands = ["search_next"] },
