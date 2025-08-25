@@ -112,4 +112,5 @@ return {
       require("dark_notify").run()
     end,
   },
+  { 'projekt0n/github-nvim-theme', name = 'github-theme' }
 }

@@ -9,7 +9,7 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "PaperColor",
+    colorscheme = "github_light_default",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     -- Icons can be configured throughout the interface
     icons = {
