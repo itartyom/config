@@ -8,4 +8,6 @@ wezterm/
 neofetch/
 .DS_Store
 nvim/lazy-lock.json
+fish/
+karabiner/
 
