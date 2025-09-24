@@ -108,9 +108,7 @@ return {
   {
     "cormacrelf/dark-notify",
     lazy = false, -- загружаем сразу при старте, чтобы реагировал на смену темы
-    config = function()
-      require("dark_notify").run()
-    end,
+    config = function() require("dark_notify").run() end,
   },
-  { 'projekt0n/github-nvim-theme', name = 'github-theme' }
+  { "projekt0n/github-nvim-theme", name = "github-theme" },
 }

@@ -12,13 +12,9 @@ return {
       -- события, которые запускают сохранение
       trigger_events = { "InsertLeave", "TextChanged" },
       -- условие: сохранять только если буфер модифицируемый
-      condition = function(buf)
-        return vim.fn.getbufvar(buf, "&modifiable") == 1
-      end,
+      condition = function(buf) return vim.fn.getbufvar(buf, "&modifiable") == 1 end,
     },
     -- автоматически вызвать setup с opts
-    config = function(_, opts)
-      require("auto-save").setup(opts)
-    end,
+    config = function(_, opts) require("auto-save").setup(opts) end,
   },
 }

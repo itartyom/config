@@ -1,7 +1,7 @@
 return {
   "f-person/auto-dark-mode.nvim",
-  lazy = false,            -- запустить сразу
-  priority = 1000,         -- применить тему как можно раньше
+  lazy = false, -- запустить сразу
+  priority = 1000, -- применить тему как можно раньше
   opts = {
     update_interval = 1000, -- мс, как часто проверять (для macOS изменений почти сразу хватает)
     set_dark_mode = function()
@@ -14,7 +14,7 @@ return {
     end,
   },
   config = function(_, opts)
-    local adm = require("auto-dark-mode")
+    local adm = require "auto-dark-mode"
     adm.setup(opts)
     adm.init()
   end,
