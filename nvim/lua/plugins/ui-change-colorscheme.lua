@@ -1,21 +1,22 @@
-return {
-  "f-person/auto-dark-mode.nvim",
-  lazy = false, -- запустить сразу
-  priority = 1000, -- применить тему как можно раньше
-  opts = {
-    update_interval = 1000, -- мс, как часто проверять (для macOS изменений почти сразу хватает)
-    set_dark_mode = function()
-      vim.o.background = "dark"
-      vim.cmd.colorscheme "github_dark_default"
-    end,
-    set_light_mode = function()
-      vim.o.background = "light"
-      vim.cmd.colorscheme "github_light_default"
-    end,
-  },
-  config = function(_, opts)
-    local adm = require "auto-dark-mode"
-    adm.setup(opts)
-    adm.init()
-  end,
-}
+-- return {
+--   "f-person/auto-dark-mode.nvim",
+--   lazy = false, -- запустить сразу
+--   priority = 1000, -- применить тему как можно раньше
+--   opts = {
+--     update_interval = 5000, -- мс, как часто проверять (для macOS изменений почти сразу хватает)
+--     set_dark_mode = function()
+--       vim.o.background = "dark"
+--       vim.cmd.colorscheme "github_dark_default"
+--     end,
+--     set_light_mode = function()
+--       vim.o.background = "light"
+--       vim.cmd.colorscheme "github_light_default"
+--     end,
+--   },
+--   config = function(_, opts)
+--     local adm = require "auto-dark-mode"
+--     adm.setup(opts)
+--     adm.init()
+--   end,
+-- }
+return {}

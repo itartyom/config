@@ -97,6 +97,7 @@ keymap = [
 
   { keys = ["'"], commands = [":shell "] },
   { keys = ["c", "w"], commands = [":rename "] },
+  { keys = ["c", "c"], commands = ["shell cursor-agent"]},
 
   { keys = ["/"], commands = [":search "] },
   { keys = ["|"], commands = [":search_inc "] },
