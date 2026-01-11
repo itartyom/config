@@ -1,0 +1,8 @@
+[[keyboard.bindings]]
+key = "T"
+mods = "Command"
+action = "None"
+
+[window]
+decorations = "Transparent"
+padding = {x = 0, y = 30}
