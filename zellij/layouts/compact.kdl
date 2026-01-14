@@ -31,23 +31,23 @@ layout {
                 tab_normal   "#[fg=#6C7086] {name} "
                 tab_active   "#[fg=#9399B2,bold,italic] {name} "
 
-                command_cpu_command "bash -c \"top -l 1 | awk '/CPU usage/ {print \\$3}'\""
+                command_cpu_command "bash -c \"$HOME/.config/zellij/scripts/zjestatus.sh cpu\""
                 command_cpu_format "#[fg=#9399B2,bg=#181825]  {stdout} "
                 command_cpu_interval "2"
                 command_cpu_rendermode "static"
 
-                command_ram_command "bash -c \"top -l 1 | awk '/PhysMem:/ {used=\\$2} END { \\\"sysctl -n hw.memsize\\\" | getline total; printf \\\"%s/%.0fG\\\", used, total/1024/1024/1024 }'\""
+                command_ram_command "bash -c \"$HOME/.config/zellij/scripts/zjestatus.sh ram\""
                 command_ram_format "#[fg=#A6E3A1,bg=#181825]  {stdout} "
                 command_ram_interval "2"
                 command_ram_rendermode "static"
 
-                command_swap_command "bash -c \"sysctl vm.swapusage | awk '{used=\\$7; total=\\$4; if (total == \\\"0.00M\\\") {print \\\"N/A\\\"} else {print used \\\"/\\\" total}}'\""
+                command_swap_command "bash -c \"$HOME/.config/zellij/scripts/zjestatus.sh swap\""
                 command_swap_format "#[fg=#FAB387,bg=#181825] 󰓡 {stdout} "
                 "command_swap_format_n/a" "#[fg=#45475a,bg=#181825] 󰓡 No Swap "
                 command_swap_interval "2"
                 command_swap_rendermode "static"
 
-                command_gpu_command "bash -c \"if command -v nvidia-smi > /dev/null; then nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F', ' '{printf \\\"%.0f%%\\\", \\$1/\\$2 * 100}'; else echo 'N/A'; fi\""
+                command_gpu_command "bash -c \"$HOME/.config/zellij/scripts/zjestatus.sh gpu\""
                 command_gpu_format "#[fg=#94E2D5,bg=#181825] 󰢮 {stdout} "
                 "command_gpu_format_n/a" "#[fg=#45475a,bg=#181825] 󱋸 No GPU "
                 command_gpu_interval "5"
@@ -57,10 +57,6 @@ layout {
                 command_git_branch_format      "#[fg=blue] {stdout} "
                 command_git_branch_interval    "10"
                 command_git_branch_rendermode  "static"
-
-                datetime        "#[fg=#6C7086,bold] {format} "
-                datetime_format "%A, %d %b %Y %H:%M"
-                datetime_timezone "Europe/Berlin"
             }
         }
         children
