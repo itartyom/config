@@ -1,3 +1,6 @@
+[general]
+import = ["~/.config/alacritty/theme.toml"]
+
 [[keyboard.bindings]]
 key = "T"
 mods = "Command"
@@ -6,3 +9,22 @@ action = "None"
 [window]
 decorations = "Transparent"
 padding = {x = 0, y = 30}
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Bold Italic"
