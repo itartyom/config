@@ -4,7 +4,7 @@ layout {
             plugin location="https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm" {
                 format_left   "{mode}"
                 format_center "{tabs}"
-                format_right  "{command_git_branch}"
+                format_right  "{command_gpu} {command_cpu} {command_ram} {command_swap}"
                 format_space  ""
 
                 border_enabled  "false"
@@ -30,6 +30,28 @@ layout {
                 mode_tmux          "#[bg=#FF8C0D]#[fg=#FF8C0D,bold]█ TMUX "
                 tab_normal   "#[fg=#6C7086] {name} "
                 tab_active   "#[fg=#9399B2,bold,italic] {name} "
+
+                command_cpu_command "bash -c \"top -l 1 | awk '/CPU usage/ {print \\$3}'\""
+                command_cpu_format "#[fg=#9399B2,bg=#181825]  {stdout} "
+                command_cpu_interval "2"
+                command_cpu_rendermode "static"
+
+                command_ram_command "bash -c \"top -l 1 | awk '/PhysMem:/ {used=\\$2} END { \\\"sysctl -n hw.memsize\\\" | getline total; printf \\\"%s/%.0fG\\\", used, total/1024/1024/1024 }'\""
+                command_ram_format "#[fg=#A6E3A1,bg=#181825]  {stdout} "
+                command_ram_interval "2"
+                command_ram_rendermode "static"
+
+                command_swap_command "bash -c \"sysctl vm.swapusage | awk '{used=\\$7; total=\\$4; if (total == \\\"0.00M\\\") {print \\\"N/A\\\"} else {print used \\\"/\\\" total}}'\""
+                command_swap_format "#[fg=#FAB387,bg=#181825] 󰓡 {stdout} "
+                "command_swap_format_n/a" "#[fg=#45475a,bg=#181825] 󰓡 No Swap "
+                command_swap_interval "2"
+                command_swap_rendermode "static"
+
+                command_gpu_command "bash -c \"if command -v nvidia-smi > /dev/null; then nvidia-smi --query-gpu=memory.used,memory.total --format=csv,noheader,nounits | awk -F', ' '{printf \\\"%.0f%%\\\", \\$1/\\$2 * 100}'; else echo 'N/A'; fi\""
+                command_gpu_format "#[fg=#94E2D5,bg=#181825] 󰢮 {stdout} "
+                "command_gpu_format_n/a" "#[fg=#45475a,bg=#181825] 󱋸 No GPU "
+                command_gpu_interval "5"
+                command_gpu_rendermode "static"
 
                 command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
                 command_git_branch_format      "#[fg=blue] {stdout} "
