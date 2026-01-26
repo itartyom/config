@@ -14,11 +14,11 @@ layout {
 
                 hide_frame_for_single_pane "true"
 
-                mode_normal        "#[bg=#00FF00]#[fg=#00FF00,bold]█"
+                mode_normal        "#[bg=#FE7F2D]#[fg=#FE7F2D,bold]█"
                 mode_locked        "#[bg=#FF00FF]#[fg=#FF00FF,bold]█"
                 mode_resize        "#[bg=#FF8C0D]#[fg=#FF8C0D,bold]█"
-                mode_pane          "#[bg=#00E5E5]#[fg=#00E5E5,bold]█"
-                mode_tab           "#[bg=#00E5E5]#[fg=#00E5E5,bold]█"
+                mode_pane          "#[bg=#F5FBE6]#[fg=#F5FBE6,bold]█"
+                mode_tab           "#[bg=#F5FBE6]#[fg=#F5FBE6,bold]█"
                 mode_scroll        "#[bg=#FF8C0D]#[fg=#FF8C0D,bold]█"
                 mode_enter_search  "#[bg=#FF8C0D]#[fg=#FF8C0D,bold]█"
                 mode_search        "#[bg=#FF8C0D]#[fg=#FF8C0D,bold]█"
@@ -28,8 +28,8 @@ layout {
                 mode_move          "#[bg=#00E5E5]#[fg=#00E5E5,bold]█"
                 mode_prompt        "#[bg=#FF00FF]#[fg=#FF00FF,bold]█"
                 mode_tmux          "#[bg=#FF8C0D]#[fg=#FF8C0D,bold]█"
-                tab_normal   "# {name} "
-                tab_active   "#[fg=#9BC264,bold,italic] {name} "
+                tab_normal   "#[fg=#233D4D,bold,italic]{name} "
+                tab_active   "#[fg=#FE7F2D,bold,italic]{name} "
 
                 command_cpu_command "bash -c \"$HOME/.config/zellij/scripts/zjestatus.sh cpu\""
                 command_cpu_format "#[fg=#9399B2,bg=#181825]  {stdout} "
