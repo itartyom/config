@@ -97,7 +97,7 @@ keymap = [
 
   { keys = ["'"], commands = [":shell "] },
   { keys = ["c", "w"], commands = [":rename "] },
-  { keys = ["c", "c"], commands = ["shell cursor-agent"]},
+  { keys = ["c", "c"], commands = ["shell claude"]},
 
   { keys = ["/"], commands = [":search "] },
   { keys = ["|"], commands = [":search_inc "] },
@@ -140,6 +140,7 @@ keymap = [
   { keys = ["b", "c"], commands = ["cd_bookmark"]},
 
   { keys = [","], commands = ["shell nvim ."]},
+  { keys = ["o", "p"], commands = ["shell Neovide --fork --frame buttonless --mouse-cursor-icon i-beam ."]}
     
 ]
 

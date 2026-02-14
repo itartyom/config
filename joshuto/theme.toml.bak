@@ -1,7 +1,9 @@
 ##########################################
-## General - Alacritty Dark Theme
+## General
 ##########################################
 lscolors_enabled = false
+# The image preview background color, only RGB colors are accepted.
+# preview_background = "#FFFFFF"
 
 ##########################################
 ## Tabs
@@ -12,24 +14,25 @@ lscolors_enabled = false
 
 # Style of active tab & current directory
 [tabs.styles.active]
-bg = "#195466"
-fg = "#99d1ce"
+bg = "light_blue"
+fg = "black"
 bold = true
 
 # Style of inactive tabs
 [tabs.styles.inactive]
-bg = "#0c1014"
-fg = "#4e5166"
 
 # Style of the left/front tab scroll tag (when tabs overflow)
 [tabs.styles.scroll_front]
-fg = "#edb443"
+fg = "yellow"
 bold = true
 
 # Style of the right/back tab scroll tag (when tabs overflow)
 [tabs.styles.scroll_back]
-fg = "#edb443"
+fg = "yellow"
 bold = true
+
+# There are more style options and strings to configure
+# the tab-bar theme.
 
 ##########################################
 ## File List - Selections
@@ -37,15 +40,13 @@ bold = true
 
 # Selected files (standard selection)
 [selection]
-fg = "#edb443"
-bg = "#0a3749"
+fg = "light_yellow"
 bold = true
 prefix = " "
 
 # Files selected in current visual mode
 [visual_mode_selection]
-fg = "#c23127"
-bg = "#0a3749"
+fg = "light_red"
 bold = true
 prefix = "v "
 
@@ -53,23 +54,23 @@ prefix = "v "
 ## File List - System File Types
 ##########################################
 
-# Basic style, used for regular files
+# Basic style, used for regular files (and also device files and FIFOs)
 [regular]
-fg = "#99d1ce"
+fg = "default"
 
 # For directories
 [directory]
-fg = "#33859e"
+fg = "light_blue"
 bold = true
 
 # For symbolic links
 [link]
-fg = "#2aa889"
+fg = "cyan"
 bold = true
 
 # For socket files
 [socket]
-fg = "#4e5166"
+fg = "light_magenta"
 bold = true
 
 ##########################################
@@ -78,57 +79,56 @@ bold = true
 
 # Files marked as executable
 [executable]
-fg = "#2aa889"
+fg = "light_green"
 bold = true
 
 # Invalid symbolic links (pointing to non-existing target)
 [link_invalid]
-fg = "#c23127"
+fg = "red"
 bold = true
 
 ##########################################
 ## File list - Override style by extension
 ##########################################
+# This sections allows to override the basic
+# style with a specific style for the file's
+# extension.
 
 [ext]
 
-# Images
-bmp.fg = "#edb443"
-gif.fg = "#edb443"
-heic.fg = "#edb443"
-jpg.fg = "#edb443"
-jpeg.fg = "#edb443"
-pgm.fg = "#edb443"
-png.fg = "#edb443"
-ppm.fg = "#edb443"
-svg.fg = "#edb443"
+bmp.fg = "yellow"
+gif.fg = "yellow"
+heic.fg = "yellow"
+jpg.fg = "yellow"
+jpeg.fg = "yellow"
+pgm.fg = "yellow"
+png.fg = "yellow"
+ppm.fg = "yellow"
+svg.fg = "yellow"
 
-# Audio
-wav.fg = "#4e5166"
-flac.fg = "#4e5166"
-mp3.fg = "#4e5166"
-amr.fg = "#4e5166"
+wav.fg = "magenta"
+flac.fg = "magenta"
+mp3.fg = "magenta"
+amr.fg = "magenta"
 
-# Video
-avi.fg = "#4e5166"
-flv.fg = "#4e5166"
-m3u.fg = "#4e5166"
-m4a.fg = "#4e5166"
-m4v.fg = "#4e5166"
-mkv.fg = "#4e5166"
-mov.fg = "#4e5166"
-mp4.fg = "#4e5166"
-mpg.fg = "#4e5166"
-rmvb.fg = "#4e5166"
-webm.fg = "#4e5166"
-wmv.fg = "#4e5166"
+avi.fg = "magenta"
+flv.fg = "magenta"
+m3u.fg = "magenta"
+m4a.fg = "magenta"
+m4v.fg = "magenta"
+mkv.fg = "magenta"
+mov.fg = "magenta"
+mp4.fg = "magenta"
+mpg.fg = "magenta"
+rmvb.fg = "magenta"
+webm.fg = "magenta"
+wmv.fg = "magenta"
 
-# Archives
-7z.fg = "#c23127"
-bz2.fg = "#c23127"
-gz.fg = "#c23127"
-rar.fg = "#c23127"
-tar.fg = "#c23127"
-tgz.fg = "#c23127"
-xz.fg = "#c23127"
-zip.fg = "#c23127"
+7z.fg = "red"
+bz2.fg = "red"
+gz.fg = "red"
+rar.fg = "red"
+tar.fg = "red"
+tgz.fg = "red"
+xz.fg = "red"
+zip.fg = "red"

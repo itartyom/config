@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+usage() {
+    echo "Usage: zworkspace <session_name> <path>"
+    echo "  session_name  - Имя zellij сессии"
+    echo "  path          - Рабочая директория"
+    exit 1
+}
+
+if [[ $# -ne 2 ]]; then
+    usage
+fi
+
+SESSION_NAME="$1"
+WORKSPACE_PATH="$2"
+
+if [[ ! -d "$WORKSPACE_PATH" ]]; then
+    echo "Error: Directory '$WORKSPACE_PATH' does not exist"
+    exit 1
+fi
+
+if zellij ls | grep -q "^${SESSION_NAME}$"; then
+    exec zellij attach "$SESSION_NAME"
+else
+    exec zellij --session "$SESSION_NAME" --cwd "$WORKSPACE_PATH"
+fi

@@ -6,8 +6,8 @@
 local M = {}
 
 M.base46 = {
-  theme = "aylin",
-  transparency = true,
+  theme = "alacritty-dark",
+  transparency = false,
 }
 
 return M

@@ -13,6 +13,11 @@ vim.opt.whichwrap = ""
 map("n", "<leader>a", "<cmd>%y+<CR><CR>", { silent = true })
 map("n", "q", ":q<CR>", { silent = true })
 
+-- Запуск Cursor TUI
+map("n", "<leader>cc", function()
+  require("nvchad.term").runner { pos = "sp", cmd = "cur", clear_cmd = false }
+end, { desc = "Open Cursor TUI" })
+
 vim.api.nvim_set_keymap("n", "<localleader>pp", "<cmd>!uv run %<CR>", { noremap = false, silent = true })
 map({ "n", "v" }, "H", "^")
 map({ "n", "v" }, "L", "$")
@@ -38,6 +43,22 @@ map("n", "<leader>lt", vim.lsp.buf.type_definition, { desc = "Goto type definiti
 map("n", "<leader>lh", vim.lsp.buf.hover, { desc = "Hover documentation" })
 map("n", "<leader>ls", vim.lsp.buf.signature_help, { desc = "Signature help" })
 map("n", "<leader>lR", vim.lsp.buf.references, { desc = "References" })
+map("n", "<leader>le", vim.diagnostic.open_float, { desc = "Show diagnostics" })
+map("n", "<leader>lq", vim.diagnostic.setloclist, { desc = "Diagnostics to loclist" })
+
+-- DAP
+map("n", "<leader>db", function() require("dap").toggle_breakpoint() end, { desc = "Toggle breakpoint" })
+map("n", "<leader>dc", function() require("dap").continue() end, { desc = "Continue" })
+map("n", "<leader>da", function() require("dap").continue() end, { desc = "Attach/Continue" })
+map("n", "<leader>di", function() require("dap").step_into() end, { desc = "Step into" })
+map("n", "<leader>do", function() require("dap").step_over() end, { desc = "Step over" })
+map("n", "<leader>dt", function() require("dap").terminate() end, { desc = "Terminate" })
+map("n", "<leader>dr", function() require("dap").repl.open() end, { desc = "Open REPL" })
+
+-- Toggle transparency
+map("n", "<leader>ut", function()
+  require("base46").toggle_transparency()
+end, { desc = "Toggle transparency" })
 
 local M = {}
 
