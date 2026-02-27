@@ -1,5 +1,6 @@
 return {
   "f-person/auto-dark-mode.nvim",
+  enabled = os.getenv("SSH_CONNECTION") == nil,
   lazy = false,
   priority = 1000,
   opts = {
